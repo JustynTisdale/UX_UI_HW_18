@@ -1,0 +1,219 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Increased padding for more space */
+    background-color: #333;
+    position: relative;
+  }
+  
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-list li {
+    margin: 10px 0;
+  }
+  
+  .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  /* Always display the hamburger icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Hide the checkbox (menu-toggle) */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* When the checkbox is checked, display the nav list */
+  .menu-toggle:checked ~ .nav-list {
+    display: flex;
+  }
+  
+  /* Toggle hamburger icon into "X" when checked */
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Hero Image Section */
+  .heroImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Keep the height to fill the screen */
+    color: #333; /* Change text color for contrast */
+    text-align: center;
+    background-color: #fff; /* Set background to white */
+    padding-top: 20px; /* Add padding to the top */
+    margin-top: 40px; /* Add margin-top for spacing above */
+    margin-bottom: 20px; /* Add margin to the bottom for spacing */
+  }
+  
+  .heroImg img {
+    width: 500px; /* Set the width */
+    height: 500px; /* Set the height to the same value for a square */
+    border-radius: 0; /* Remove border radius to make it square */
+    margin-bottom: 20px;
+  }
+  
+  .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* About Section */
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  /* Skills Section */
+  .skills {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Projects Section */
+  .projects {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-item {
+    text-align: center;
+  }
+  
+  .project-item img {
+    width: 100%; /* Ensures image takes full width of the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Round the corners of the images */
+    max-height: 200px; /* Optional: set a maximum height for uniformity */
+    object-fit: cover; /* Optional: ensures the image covers the area without stretching */
+  }
+  
+  /* Contact Section */
+  .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #333;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1280px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .nav-list li a {
+      font-size: 1.2rem;
+    }
+  }
